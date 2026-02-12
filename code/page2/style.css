@@ -1,5 +1,5 @@
 body {
-    background-color:rgba(21, 255, 0, 0.517);
+    background-color:rgb(21, 255, 0);
 }
 
 .navbar {
@@ -16,15 +16,18 @@ p {
     text-align: center;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: dodgerblue;
-  padding: 10px;
+.backgroundtext {
+    padding: 2rem;
+    color:rgb(132, 132, 132);
+    font-family: monospace;
+    font-size: 0.8rem;
+    text-align: justify;
+    display:inline-block;
+    transition:transfor 0.3s ease-in;
+    
+    
 }
-.container div {
-  background-color: #f1f1f1;
-  border: 1px solid black;
-  padding: 10px;
-  font-size: 30px;
-  text-align: center;
+
+.backgroundtext a:hover {
+    transform:scale(1.5);
+}
