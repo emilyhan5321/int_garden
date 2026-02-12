@@ -1,5 +1,6 @@
 body {
-    background-color:rgba(21, 255, 0, 0.517);
+    background-color: rgba(21, 255, 0, 0.517);
+
 }
 
 .navbar {
@@ -15,3 +16,29 @@ body {
 p {
     text-align: center;
 }
+
+
+.container {
+  display: grid;
+  grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+  justify-self: center;
+
+}
+
+@media (max-width:500px)  {
+    .container {
+        grid-template-columns: 15vw 15vw 15vw;
+
+    }
+}
+
+.container div {
+  background-color: #fbfffb87;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 15px;
+  text-align: center;
+  height: 10vh;
+
+}
+
