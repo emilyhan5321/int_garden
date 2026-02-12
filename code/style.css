@@ -1,17 +1,65 @@
 body {
     background-color:rgba(21, 255, 0, 0.517);
+    background-image: url ("homeimage.svg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
 }
 
 .navbar {
-    display:inline-flex;
+    display:flex;
     justify-content: space-between;
-
+    align-items: center;
+    padding: 10vw;
+    gap: clamp(12px, 3vw, 32px);
+    animation: fall 2s ease-in;
 }
 
 .bar {
-    width: 35vw;
+width: 5vw;
+height: 80vh;
+  opacity: 0;
+  animation: shrinkIn 6s ease forwards;
+}
+
+@keyframes shrinkIn {
+  0% {
+    transform: scale(3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 p {
     text-align: center;
 }
+
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translateY(-120vh) rotate(-220deg) scale(5);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(10px) rotate(10deg) scale(2); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+

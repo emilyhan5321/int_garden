@@ -3,25 +3,37 @@ body {
 }
 
 .navbar {
-    display:inline-flex;
+    display:flex;
     justify-content: space-between;
-
+    gap: clamp(12px, 3vw, 32px);
+    padding: 1vw;
+    z-index: 100;
+    margin:auto;
 }
 
 .bar {
-    width: 35vw;
+    size: 15px;
+    width: 120px;
+    justify-content: center;
+    padding-top: 5vw;
 }
 
+
+
 h2 {
-    text-align: center;
-    padding:10rem;
+    margin-top: 10vw;
+    padding:3rem;
+    text-align:justify;
     line-height: 35px;
     size: 2rem;
     font-family:sans-serif;
 
 }
 
+#larger {
+    text-align: justify;
+}
+
 .text:hover {
     color:blue;
-   
 }
