@@ -1,12 +1,18 @@
 
 .navbar {
-    display:inline-flex;
     justify-content: space-between;
+    display:flex;
+    gap: clamp(12px, 3vw, 32px);
+    padding: 1vw;
+    z-index: 100;
+    margin:auto;
 
 }
 
+
+
 .bar {
-    width: 35vw;
+    width: 15vw;
 }
 
 p {
@@ -14,19 +20,24 @@ p {
 }
 
 
-.container {
+.container, .imagecontainer {
   display: grid;
-  grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+  grid-template-columns: 10vw 10vw 10vw 10vw 10vw;
   justify-self: center;
   font-family:monospace;
   font-size: 6rem;
 
 }
 
-@media (max-width:500px)  {
+@media (max-width:760px)  {
     .container {
-        grid-template-columns: 15vw 15vw 15vw;
+        grid-template-columns: 25vw 25vw 25vw;
+    }
+}
 
+@media (max-width:450px)  {
+    .container {
+        grid-template-columns: 35vw 35vw;
     }
 }
 
@@ -36,6 +47,7 @@ p {
   padding: 10px;
   font-size: 15px;
   text-align: center;
+  line-height: 10vh;
   height: 10vh;
 
 }
