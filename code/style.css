@@ -1,6 +1,6 @@
 body {
     background-color:rgba(21, 255, 0, 0.517);
-    background-image: url ("homeimage.svg");
+    background-image: url("home.png"); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -63,3 +63,7 @@ p {
 }
 
 
+.larger {
+  z-index: 100;
+  
+}
