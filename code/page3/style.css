@@ -1,0 +1,17 @@
+body {
+    background-color:rgba(21, 255, 0, 0.517);
+}
+
+.navbar {
+    display:inline-flex;
+    justify-content: space-between;
+
+}
+
+.bar {
+    width: 35vw;
+}
+
+p {
+    text-align: center;
+}
