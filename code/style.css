@@ -1,5 +1,5 @@
 body {
-    background-color:rgba(21, 255, 0, 0.517);
+
     background-image: url("home.png"); 
     background-size: cover;
     background-position: center;
@@ -13,10 +13,11 @@ body {
     padding: 10vw;
     gap: clamp(12px, 3vw, 32px);
     animation: fall 2s ease-in;
+    z-index: 1000;
 }
 
 .bar {
-width: 5vw;
+width: 7vw;
 height: 80vh;
   opacity: 0;
   animation: shrinkIn 6s ease forwards;
@@ -65,5 +66,5 @@ p {
 
 .larger {
   z-index: 100;
-  
+
 }
