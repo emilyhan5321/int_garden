@@ -20,13 +20,15 @@ body {
 
 
 
-h2 {
+h2, .larger {
     margin-top: 10vw;
-    padding:15rem;
+    padding:11rem;
     text-align:justify;
     line-height: 35px;
     size: 2rem;
     font-family:sans-serif;
+    font-family: monospace;
+
 }
 
 
@@ -51,17 +53,12 @@ h1 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
   background: white;
   font-family: sans-serif;
   padding: 18px 22px;
   border-radius: 12px;
-
-  /* optional: make it look like a “popup” */
   box-shadow: 0 10px 30px rgba(0,0,0,.18);
   z-index: 9999;
-
-  /* hidden by default */
   opacity: 0;
   pointer-events: none;
   transition: opacity .25s ease;
@@ -73,3 +70,27 @@ h1 {
 
 
 
+
+
+.home {
+    position: fixed;
+    bottom: 12vh;
+    right: 7vw;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.home img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.home img:hover {
+    transform: scale(1.2);
+   
+}
