@@ -22,17 +22,54 @@ body {
 
 h2 {
     margin-top: 10vw;
-    padding:3rem;
+    padding:15rem;
     text-align:justify;
     line-height: 35px;
     size: 2rem;
     font-family:sans-serif;
 }
 
-#larger {
-    text-align: justify;
-}
+
 
 .text:hover {
     color:blue;
 }
+
+
+h1 {
+    margin-top: 10vw;
+    padding:15rem;
+    text-align:justify;
+    line-height: 35px;
+    size: 2rem;
+    font-family:sans-serif;
+}
+
+
+.popup-mid{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: white;
+  font-family: sans-serif;
+  padding: 18px 22px;
+  border-radius: 12px;
+
+  /* optional: make it look like a “popup” */
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  z-index: 9999;
+
+  /* hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+
+.popup-mid.is-visible{
+  opacity: 1;
+}
+
+
+

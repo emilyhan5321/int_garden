@@ -48,14 +48,32 @@ p {
 }
 
 
-@keyframes fall {
+
+.larger {
+  z-index: 100;
+
+}
+
+
+.bar{
+  opacity: 0;
+  transform: translateY(-120vh) rotate(-220deg) scale(1.1);
+  animation: fallIntoPlace 1.2s cubic-bezier(.2,.9,.2,1) forwards;
+  will-change: transform, opacity;
+}
+
+.navbar a:nth-child(1) .bar { animation-delay: 0.15s; }
+.navbar a:nth-child(2) .bar { animation-delay: 0.35s; }
+.navbar a:nth-child(3) .bar { animation-delay: 0.55s; }
+
+@keyframes fallIntoPlace {
   0% {
     opacity: 0;
-    transform: translateY(-120vh) rotate(-220deg) scale(5);
+    transform: translateY(-120vh) rotate(-220deg) scale(20);
   }
   65% {
     opacity: 1;
-    transform: translateY(10px) rotate(10deg) scale(2); 
+    transform: translateY(5vh) rotate(12deg) scale(1.5); 
   }
   100% {
     opacity: 1;
@@ -64,7 +82,5 @@ p {
 }
 
 
-.larger {
-  z-index: 100;
 
-}
+
