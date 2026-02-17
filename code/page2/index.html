@@ -13,9 +13,8 @@
 </head>
 <body>
 
-<!-- Add some notes -->
   <div class="navbar"> 
-<a href="/code/index.html" >
+<a href="/code/page1/index.html" >
   <img class="bar" src="../images/navbaricons-01.svg"/>
 </a>
 
@@ -26,13 +25,19 @@
 <a href="/code/page3/index.html">
   <img class="bar" src="../images/navbaricons-03.svg"/>
  </a>
-
   </div>
 
-<div class="backgroundtext" id="story">
-  The Circular Ruins
+  <a href="/code/index.html" class="home"> 
+   <img class="bar" src="../images/navbaricons-01.svg"/>  home
+</a>
+
+
+<div class="backgroundtext">   The Circular Ruins
   </br>
-Jorge Luis Borges
+Jorge Luis Borges</div>
+
+<div class="backgroundtext" id="story">
+
 </br></br>
 No one saw him disembark in the unanimous night, no one saw the bamboo canoe sink into the sacred mud, but
 in a few days there was no one who did not know that the taciturn man came from the South and that his home
@@ -163,6 +168,8 @@ flesh, they caressed him and flooded him without heat or combustion. With relief
 he understood that he also was an illusion, that someone else was dreaming him.
 </div>
 
+
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("story");
@@ -171,19 +178,15 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Use textContent to avoid HTML issues
   const text = container.textContent;
 
-  // Split into tokens that preserve whitespace
   const tokens = text.split(/(\s+)/);
 
-  // Clear and rebuild with spans only for words
   container.innerHTML = "";
 
   const wordSpans = [];
   tokens.forEach(t => {
     if (t.trim() === "") {
-      // keep spaces/newlines exactly
       container.appendChild(document.createTextNode(t));
     } else {
       const span = document.createElement("span");
@@ -194,20 +197,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Remove from the last word
   let i = wordSpans.length - 1;
 
   function step() {
     if (i < 0) return;
     wordSpans[i].classList.add("gone");
     i--;
-    setTimeout(step, 60); // speed (bigger = slower)
+    setTimeout(step, 10); 
   }
 
   step();
 });
 </script>
-
 
 </body>
 </html>
