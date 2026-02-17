@@ -26,7 +26,6 @@ h2, .larger {
     text-align:justify;
     line-height: 35px;
     size: 2rem;
-    font-family:sans-serif;
     font-family: monospace;
 
 }
@@ -94,3 +93,16 @@ h1 {
     transform: scale(1.2);
    
 }
+
+details {
+    margin:center;
+    padding: center;
+    font-family:monospace;
+    width: 50%;
+
+}
+
+details:open {
+    display: list-item;
+}
+
