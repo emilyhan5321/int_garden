@@ -6,9 +6,8 @@ body {
     display:flex;
     justify-content: space-between;
     gap: clamp(12px, 3vw, 32px);
-    padding: 1vw;
     z-index: 100;
-    margin:auto;
+    margin:10rem;
 }
 
 .bar {
@@ -20,7 +19,7 @@ body {
 
 
 
-h2, .larger {
+h2 {
     margin-top: 10vw;
     padding:11rem;
     text-align:justify;
@@ -47,34 +46,10 @@ h1 {
 }
 
 
-.popup-mid{
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  font-family: sans-serif;
-  padding: 18px 22px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.18);
-  z-index: 9999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s ease;
-}
-
-.popup-mid.is-visible{
-  opacity: 1;
-}
-
-
-
-
-
 .home {
     position: fixed;
     bottom: 12vh;
-    right: 7vw;
+    right: 5vw;
     width: 60px;
     height: 60px;
     z-index: 1000;
@@ -96,13 +71,27 @@ h1 {
 
 details {
     margin:center;
-    padding: center;
+    padding-left: 12rem;
     font-family:monospace;
-    width: 50%;
+    
 
 }
 
 details:open {
     display: list-item;
+    background-color: white;
+    width:80%;
+    height: 30vh;
+}
+
+
+@media (min-width: 500px) {
+    .h1, .detail {
+    justify-content:center;
+    flex-wrap:wrap;
+    }
+    .navbar {
+        padding:1vw;
+    }
 }
 
