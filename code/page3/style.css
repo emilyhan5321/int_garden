@@ -6,9 +6,7 @@
     padding: 1vw;
     z-index: 100;
     margin:auto;
-
 }
-
 
 
 .bar {
@@ -17,6 +15,22 @@
 
 p {
     text-align: center;
+    margin: auto;
+    font-family: monospace;
+    padding: 19vw;
+    size: 3rem;
+    line-height: 3vh;
+
+}
+
+.h1{
+    text-align: center;
+    margin: auto;
+    font-family: monospace;
+    padding: 19vw;
+    size: 16rem;
+    line-height: 3vh;
+
 }
 
 
@@ -26,6 +40,7 @@ p {
   justify-self: center;
   font-family:monospace;
   font-size: 4rem;
+  max-height: 10vw;
 
 }
 
@@ -45,7 +60,7 @@ p {
     }
 }
 
-.container div {
+.container {
   background-color: #fbfffb87;
   border: 2px dotted black;
   padding: 10px;
@@ -77,7 +92,6 @@ p {
   transform: translateX(-50%) translateY(6px);
   background: #111;
   color: #fff;
-  padding: 6px 10px;
   border-radius: 8px;
   font-size: 12px;
   line-height: 1.2;
@@ -90,4 +104,74 @@ p {
 .text:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+
+
+
+
+.button {
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup .content {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+  font-size: 2rem;
+
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+.insidetext {
+    padding:55%;
 }
