@@ -3,17 +3,29 @@ body {
 }
 
 .navbar {
-    display:inline-flex;
+    display:flex;
     justify-content: space-between;
-
+    gap: clamp(12px, 3vw, 32px);
+    padding: 1vw;
+    z-index: 100;
+    margin:auto;
 }
 
 .bar {
-    width: 35vw;
+    size: 15px;
+    width: 120px;
+    justify-content: center;
+    padding-top: 5vw;
 }
 
-p {
-    text-align: center;
+p .title {
+    padding: 10rem;
+    color:rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 0.8rem;
+    text-align: justify;
+    display:inline-block;
+    transition:transfor 0.3s ease-in;
 }
 
 .backgroundtext {
@@ -25,7 +37,6 @@ p {
     display:inline-block;
     transition:transfor 0.3s ease-in;
     
-    
 }
 
 .backgroundtext a:hover {
@@ -33,9 +44,6 @@ p {
     transition: 1s ease-in;
 }
 
-div {
-
-}
 
 
 
@@ -46,4 +54,28 @@ div {
 
 .word.gone {
   opacity: 0;
+}
+
+
+.home {
+    position: fixed;
+    bottom: 12vh;
+    right: 7vw;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.home img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.home img:hover {
+    transform: scale(1.2);
+   
 }
