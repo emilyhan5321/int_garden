@@ -23,15 +23,7 @@ p {
 
 }
 
-.h1{
-    text-align: center;
-    margin: auto;
-    font-family: monospace;
-    padding: 19vw;
-    size: 16rem;
-    line-height: 3vh;
 
-}
 
 
 .container, .imagecontainer {
@@ -72,106 +64,22 @@ p {
 
 }
 
-
-.text {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.color {
+    filter: blur(2px);
+    opacity:0.7;
+    transition: filter 0.4s ease, opacity 0.4s ease;
+    
+}
+.color:hover {
+    filter: blur(0px);
+    opacity: 1;
+    transform: scale(1.3); 
+    transition: 0.3s ease;
+    rotate: 10deg;
 }
 
-.text:hover {
-  transform: scale(1.15);
-}
+#title {
+    size: 10vw;
+    ;
 
-.text::after {
-  content: attr(data-context);
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 10px);
-  transform: translateX(-50%) translateY(6px);
-  background: #111;
-  color: #fff;
-  border-radius: 8px;
-  font-size: 12px;
-  line-height: 1.2;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.text:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-
-
-
-
-.button {
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
-}
-
-.popup .content {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif;
-}
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-  font-size: 2rem;
-
-}
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 70%;
-  }
-}
-
-.insidetext {
-    padding:55%;
 }

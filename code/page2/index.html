@@ -29,10 +29,11 @@
 
   </div>
 
-<div class="backgroundtext">
+<div class="backgroundtext" id="story">
   The Circular Ruins
+  </br>
 Jorge Luis Borges
-</br>
+</br></br>
 No one saw him disembark in the unanimous night, no one saw the bamboo canoe sink into the sacred mud, but
 in a few days there was no one who did not know that the taciturn man came from the South and that his home
 had been one of those numberless villages upstream in the deeply cleft side of the mountain, where the Zend
@@ -57,6 +58,7 @@ been able to give an answer. This uninhabited, ruined temple suited him, for it 
 world; the proximity of the workmen also suited him, for they took it upon themselves to provide for his frugal
 needs. The rice and fruit they brought him were nourishment enough for his body, which was consecrated to the
 sole task of sleeping and dreaming.
+</br>
 At first, his dreams were chaotic; then in a short while they became dialectic in nature. The stranger dreamed that
 he was in the center of a circular amphitheater which was more or less the burnt temple; clouds of taciturn
 students filled the tiers of seats; the faces of the farthest ones hung at a distance of many centuries and as high as
@@ -66,6 +68,7 @@ examination which would redeem one of them from his condition of empty illusion 
 real world. Asleep or awake, the man thought over the answers of his phantoms, did not allow himself to be
 deceived by imposters, and in certain perplexities he sensed a growing intelligence. He was seeking a soul
 worthy of participating in the universe.
+</br>
 After nine or ten nights he understood with a certain bitterness that he could expect nothing from those pupils
 who accepted his doctrine passively, but that he could expect something from those who occasionally dared to
 oppose him. The former group, although worthy of love and affection, could not ascend to the level of
@@ -81,6 +84,7 @@ among the hemlock he barely succeeded in experiencing several short snatchs of s
 rudimentary visions that were useless. He tried to assemble the student body but scarcely had he articulated a
 few brief words of exhortation when it became deformed and was then erased. In his almost perpetual vigil, tears
 of anger burned his old eyes.
+</br>
 He understood that modeling the incoherent and vertiginous matter of which dreams are composed was the most
 difficult task that a man could undertake, even though he should penetrate all the enigmas of a superior and
 inferior order; much more difficult than weaving a rope out of sand or coining the faceless wind. He swore he
@@ -101,6 +105,7 @@ again, invoked the name of a planet, and undertook the vision of another of the 
 had come to the skeleton and the eyelids. The innumerable hair was perhaps the most difficult task. He dreamed
 an entire man--a young man, but who did not sit up or talk, who was unable to open his eyes. Night after night,
 the man dreamt him asleep.
+</br>
 In the Gnostic cosmosgonies, demiurges fashion a red Adam who cannot stand; as a clumsy, crude and elemental
 as this Adam of dust was the Adam of dreams forged by the wizard's nights. One afternoon, the man almost
 destroyed his entire work, but then changed his mind. (It would have been better had he destroyed it.) When he
@@ -114,6 +119,7 @@ creatures, except Fire itself and the dreamer, would believe to be a man of fles
 once this man had been instructed in all the rites, he should be sent to the other ruined temple whose pyramids
 were still standing downstream, so that some voice would glorify him in that deserted ediface. In the dream of
 the man that dreamed, the dreamed one awoke.
+</br>
 The wizard carried out the orders he had been given. He devoted a certain length of time (which finally proved to
 be two years) to instructing him in the mysteries of the universe and the cult of fire. Secretly, he was pained at
 the idea of being seperated from him. On the pretext of pedagogical necessity, each day he increased the number
@@ -121,6 +127,7 @@ of hours dedicated to dreaming. He also remade the right shoulder, which was som
 was disturbed by the impression that all this had already happened . . . In general, his days were happy; when he
 closed his eyes, he thought: Now I will be with my son. Or, more rarely: The son I have engendered is waiting
 for me and will not exist if I do not go to him.
+</br>
 Gradually, he began accustoming him to reality. Once he ordered him to place a flag on a faraway peak. The next
 day the flag was fluttering on the peak. He tried other analogous experiments, each time more audacious. With a
 certain bitterness, he understood that his son was ready to be born--and perhaps impatient. That night he kissed
@@ -128,6 +135,7 @@ him for the first time and sent him off to the other temple whose remains were t
 many miles of inextricable jungle and marshes. Before doing this (and so that his son should never know that he
 was a phantom, so that he should think himself a man like any other) he destroyed in him all memory of his
 years of apprenticeship.
+</br>
 His victory and peace became blurred with boredom. In the twilight times of dusk and dawn, he would prostrate
 himself before the stone figure, perhaps imagining his unreal son carrying out identical rites in other circular
 ruins downstream; at night he no longer dreamed, or dreamed as any man does. His perceptions of the sounds
@@ -143,6 +151,7 @@ man's dreams--what an incomparable humiliation, what madness! Any father is inte
 procreated (or permitted) out of the mere confusion of happiness; it was natural that the wizard should fear for
 the future of that son whom he had thought out entrail by entrail, feature by feature, in a thousand and one secret
 nights.
+</br>
 His misgivings ended abruptly, but not without certain forewarnings. First (after a long drought) a remote cloud,
 as light as a bird, appeared on a hill; then, toward the South, the sky took on the rose color of leopard's gums;
 then came clouds of smoke which rusted the metal of the nights; afterwards came the panic-stricken flight of
@@ -154,6 +163,50 @@ flesh, they caressed him and flooded him without heat or combustion. With relief
 he understood that he also was an illusion, that someone else was dreaming him.
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("story");
+  if (!container) {
+    console.error('No element with id="story" found.');
+    return;
+  }
+
+  // Use textContent to avoid HTML issues
+  const text = container.textContent;
+
+  // Split into tokens that preserve whitespace
+  const tokens = text.split(/(\s+)/);
+
+  // Clear and rebuild with spans only for words
+  container.innerHTML = "";
+
+  const wordSpans = [];
+  tokens.forEach(t => {
+    if (t.trim() === "") {
+      // keep spaces/newlines exactly
+      container.appendChild(document.createTextNode(t));
+    } else {
+      const span = document.createElement("span");
+      span.className = "word";
+      span.textContent = t;
+      container.appendChild(span);
+      wordSpans.push(span);
+    }
+  });
+
+  // Remove from the last word
+  let i = wordSpans.length - 1;
+
+  function step() {
+    if (i < 0) return;
+    wordSpans[i].classList.add("gone");
+    i--;
+    setTimeout(step, 60); // speed (bigger = slower)
+  }
+
+  step();
+});
+</script>
 
 
 </body>

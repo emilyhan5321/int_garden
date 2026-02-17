@@ -1,5 +1,5 @@
 body {
-    background-color:rgb(21, 255, 0);
+    background-color:rgba(21, 255, 0, 0.626);
 }
 
 .navbar {
@@ -17,8 +17,8 @@ p {
 }
 
 .backgroundtext {
-    padding: 2rem;
-    color:rgb(132, 132, 132);
+    padding: 10rem;
+    color:rgb(0, 0, 0);
     font-family: monospace;
     font-size: 0.8rem;
     text-align: justify;
@@ -30,4 +30,20 @@ p {
 
 .backgroundtext a:hover {
     transform:scale(1.5);
+    transition: 1s ease-in;
+}
+
+div {
+
+}
+
+
+
+.word {
+  display: inline;
+  transition: opacity 0.25s ease;
+}
+
+.word.gone {
+  opacity: 0;
 }
