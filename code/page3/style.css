@@ -72,20 +72,22 @@ h1 {
 
 details {
     margin:center;
-    font-family:monospace;
-    width:70vw;
 
+    font-family:monospace;
+    
+    text-align: center;
 
 }
 
 details:open {
     display: list-item;
-    background-color: rgba(21, 255, 0, 0.626);
-    width:70vw;
-    height: 15vh;
-
-
+    background-color: rgba(77, 255, 0, 0.636);
+    width:50vw;
+    padding: 3vh;
+    margin:auto;
+    
 }
+
 
 
 @media (min-width: 500px) {

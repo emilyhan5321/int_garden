@@ -5,7 +5,7 @@
     align-items: center;
     padding: 10vw;
     gap: clamp(12px, 3vw, 32px);
-    animation: fall 2s ease-in;
+    animation: fall 3s ease-in;
     z-index: 1000;
 }
 
@@ -63,7 +63,7 @@ p {
   will-change: transform, opacity;
 }
 
-.navbar a:nth-child(1) .bar { animation-delay: 0.15s; }
+.navbar a:nth-child(1) .bar { animation-delay: 0.2s; }
 .navbar a:nth-child(2) .bar { animation-delay: 0.35s; }
 .navbar a:nth-child(3) .bar { animation-delay: 0.55s; }
 
