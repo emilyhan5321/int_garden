@@ -7,7 +7,7 @@ body {
     justify-content: space-between;
     gap: clamp(12px, 3vw, 32px);
     z-index: 100;
-    margin:10rem;
+    margin:4rem 10rem 4rem;
 }
 
 .bar {
